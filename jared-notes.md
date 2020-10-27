@@ -4,6 +4,7 @@
   - Will not address due to reported possible breaking changes by the audit.
 - Has basic Create-React-App scaffold for front end
 - Children is a special prop for passthrough
+- Have to restart node for changes to take effect. Spoiled by recent use of CRA and wasted time chasing bugs that were not there, I just had not restarted the server. Bleh!
 
 ## Thoughts
 
@@ -51,11 +52,11 @@ It is not required to complete every part of this assessment. Go as far as you c
 
 ## Back End
 
-1. Complete the `logRequest` middleware to log each request path and the user’s ip address.
+1. Complete the `logRequest` middleware to log each request path and the user’s ip address. (COMPLETED)
    1. Use the existing Logger library
    2. Create a new logger object named ‘logReqest’
    3. Log to the `info` transport
-2. Add new endpoints to the `/wallets` route for POST, PUT and DELETE
+2. Add new endpoints to the `/wallets` route for POST, PUT and DELETE (COMPLETED)
 3. Create three new application methods:
    1. addWallet
    2. updateWallet

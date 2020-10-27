@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import CardTitle from '../../atoms/Text/CardTitle';
-// import CardAddress from '../../atoms/Text/CardAddress';
-// import CardBalance from '../../atoms/Text/CardBalance';
-import { usdFormatter, cryptoFormatter } from '../../../util/index';
+// import { usdFormatter, cryptoFormatter } from '../../../util/index';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -32,13 +29,13 @@ export default function EditWallet({ children, wallet, rate }) {
     currency = wallet.currency;
     balance = wallet.balance;
   }
-  const formattedBalance = cryptoFormatter(balance);
-  const formattedCashBalance = usdFormatter.format(balance / rate);
+  // const formattedBalance = cryptoFormatter(balance);
+  // const formattedCashBalance = usdFormatter.format(balance / rate);
 
   return (
     <div className={classes.card}>
       {children}
-      <form action="">
+      <form action="" method="post">
         <div>
           <label htmlFor="name">Name </label>
           <input type="text" name="name" id="name" value={name} />
@@ -55,6 +52,7 @@ export default function EditWallet({ children, wallet, rate }) {
           <label htmlFor="balance">Balance: </label>
           <input type="text" name="balance" id="balance" value={balance} />
         </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
