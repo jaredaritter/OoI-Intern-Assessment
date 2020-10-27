@@ -31,8 +31,8 @@ It is not required to complete every part of this assessment. Go as far as you c
    2. Properly format amounts for ETH/BTC. (COMPLETED ???????)
    3. Display & format USD amounts using the `rate` prop. (COMPLETED ??????)
 5. Filter the wallets array on the Wallets page to display only the Ethereum wallets on the Ethereum tab and Bitcoin on the Bitcoin tab. (COME BACK TO **\*\*\*\*** FEEL LIKE I'M MISSING SOMETHING OBVIOUS)
-6. Create a form to add/edit wallets.
-7. Add an ‘Add New Wallet’ button to the Wallets Template
+6. Create a form to add/edit wallets. (COMPLETED KINDA. NEEDS WORK ON PROPS)
+7. Add an ‘Add New Wallet’ button to the Wallets Template (COMPLETED)
 8. Create three new actions:
    1. addWallet.js
       Using fetch, POST the new data to the backend
