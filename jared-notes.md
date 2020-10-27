@@ -1,15 +1,44 @@
 # Jared's personal notes for the this project
 
-- NPM warning on install for client with high risk packages.
-  - Will not address due to reported possible breaking changes by the audit.
-- Has basic Create-React-App scaffold for front end
-- Children is a special prop for passthrough
-- Have to restart node for changes to take effect. Spoiled by recent use of CRA and wasted time chasing bugs that were not there, I just had not restarted the server. Bleh!
+## Final notes
+
+I'm out of my alloted 4 hours and out of real progress that I can make without more learning.
+
+This was an enlightening experience and a significant challenge. You will unfortunately find that a significant portion of the project does not work due to my lack of familiarity with meshing front and back ends together through APIs. I have known that this is a weakness of mine and have kicked it down the road focusing on fundamentals but that approach has bitten me on this.
+
+I have tried to put comments in areas of the code where I had difficulty or was unable to implement properly and have condensed my takeaways below. Thank you for this opportunity!
+
+Pros:
+
+- By and large able to understand all of the front end requirements, implement most if in a crude fashion, and take advantage of some of the built in components and features despite not having seen them before.
+- General understanding of the front end codebase outside of the methods and actions relating to linking to the back end.
+- Able to implement logger and parse backend index.js file appropriately
+- Able to parse more complicated back end than I have seen before and create the post, put, and delete endpoints.
+- Able to understand the intention of the full project, I just do not have the technical knowledge to implement the features in the time required.
+
+Cons:
+
+- Unfamiliar with the special 'children' property until seeing it here and had difficulty using it for more than basic passthrough
+  - This became an issue for appropriate filtering of the coins
+- Unable to implement wallet modification buttons linking to back end and unable to take that information appropriately for back end use. Very much need to brush up on Node and Express use.
+- The linking of front and back ends through this style of API caused me a lot of trouble and I was ultimately not able to learn enough to get it working in the time.
+- My testing knowledge is rudimentary with no time left to implement any further testing.
 
 ## Thoughts
 
-I'm having to spend quite a bit of time looking things up because they are being done in ways different than I am used to. I can largely understand and read the codebase but the Material UI and Atomic Design make the code busy and harder to parse.
+I'm having to spend quite a bit of time looking things up because they are being done in ways different than I am used to. I can mostly understand and read the codebase but the Material UI and Atomic Design make the code busy and harder to parse.
 It is certainly better to use the existing code to complete the assignment as most development would rather use existing structures but due to time constraints it may be faster to just rebuild things and do it the way I know.
+The API routing and endpoints along with the integration between front and back end is significantly different than what I have learned on and is a large hinderance for me. This needs to be a future focus as it is the core of what I will be doing.
+
+## Mini thoughts
+
+- NPM warning on install for client with high risk packages.
+  - Will not address due to reported possible breaking changes by the audit.
+- Has basic Create-React-App scaffold for front end
+- Express backend
+- Children is a special prop for passthrough
+- Full use of hooks and API for data flow and connection
+- Have to restart node for changes to take effect. I'm spoiled by recent use of CRA and wasted time chasing bugs that were not there, I just had not restarted the server. Bleh!
 
 # UNICEF Office of Innovation Blockchain Team Intern Assessment
 
