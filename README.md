@@ -1,3 +1,5 @@
+# Please see [Jared's Notes](https://github.com/jaredaritter/OoI-Intern-Assessment/blob/unicef-assessment/jared-notes.md) for his thoughts
+
 # UNICEF Office of Innovation Blockchain Team Intern Assessment
 
 It is not required to complete every part of this assessment. Go as far as you can in the allotted time.
