@@ -33,21 +33,21 @@ It is not required to complete every part of this assessment. Go as far as you c
 5. Filter the wallets array on the Wallets page to display only the Ethereum wallets on the Ethereum tab and Bitcoin on the Bitcoin tab. (COME BACK TO **\*\*\*\*** FEEL LIKE I'M MISSING SOMETHING OBVIOUS)
 6. Create a form to add/edit wallets. (COMPLETED KINDA. NEEDS WORK ON PROPS)
 7. Add an ‘Add New Wallet’ button to the Wallets Template (COMPLETED)
-8. Create three new actions:
+8. Create three new actions: (CREATED BUT NOT IMPLEMENTED. WILL COME BACK IF I HAVE TIME)
    1. addWallet.js
       Using fetch, POST the new data to the backend
    2. editWallet.js
       Using fetch, PUT the updated data to the backend
    3. removeWallet.js
       Using fetch, DELETE wallet data from the backend
-9. Add ‘Edit Wallet’ & ‘Remove Wallet’ buttons to your WalletCard
-10. Wire up your new actions.
+9. Add ‘Edit Wallet’ & ‘Remove Wallet’ buttons to your WalletCard (COMPLETED)
+10. Wire up your new actions. (NOT SPENDING TIME SINCE ACTIONS ARE NOT IMPLEMENTED)
 
 ### Expected Results:
 
-1. WalletCards are displayed on page when the app opens
-2. Add/Remove/Edit Wallets
-3. WalletCards update as the Wallet details change on the backend.
+1. WalletCards are displayed on page when the app opens (TRUE)
+2. Add/Remove/Edit Wallets (BUTTONS PRESENT BUT LIMITED FUNCTION)
+3. WalletCards update as the Wallet details change on the backend. (UNKNOWN, MIGHT BE HELPFUL TO USE THIS AFTER WORKING ON BACK END)
 
 ## Back End
 

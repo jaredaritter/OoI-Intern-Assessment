@@ -1,31 +1,31 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const { Logger } = require("node-core-utils");
-const { walletAPI } = require("./api");
-const defaultConfig = require("./config");
-const walletData = require("./config/wallets");
+const express = require('express');
+const bodyParser = require('body-parser');
+const { Logger } = require('node-core-utils');
+const { walletAPI } = require('./api');
+const defaultConfig = require('./config');
+const walletData = require('./config/wallets');
 
 class App {
   constructor(config) {
     this.config = { ...defaultConfig, ...config };
-    this.logger = new Logger("Intern Assessment");
+    this.logger = new Logger('Intern Assessment');
     this.logger.info(`Starting...`);
     this.walletData = walletData;
     this.init();
   }
   init() {
-    this.logger.info("Initializing");
+    this.logger.info('Initializing');
     this.logger.debug(this.config);
     this.environment = this.config.environment;
 
     this.server = express();
-    this.server.set("trust_proxy", this.config.trustProxy);
-    this.server.set("json spaces", this.config.jsonSpaces);
+    this.server.set('trust_proxy', this.config.trustProxy);
+    this.server.set('json spaces', this.config.jsonSpaces);
     this.server.use(bodyParser.urlencoded(this.config.urlencoded));
     this.server.use(bodyParser.json({ limit: this.config.uploadLimit }));
-    this.server.set("app", this);
-    this.server.use("/api", this.logRequest);
-    this.server.use("/api/wallets", walletAPI);
+    this.server.set('app', this);
+    this.server.use('/api', this.logRequest);
+    this.server.use('/api/wallets', walletAPI);
 
     this.logger.info(`Initialized`);
   }
@@ -43,6 +43,12 @@ class App {
   }
 
   logRequest(req, res, next) {
+    const logRequest = {
+      path: req.path,
+      ip: req.ip,
+    };
+    let log = new Logger('logRequest');
+    log.info(`Heading to ${logRequest.path} from ${logRequest.ip}.`);
     next();
   }
 
