@@ -10,6 +10,7 @@ I have tried to put comments in areas of the code where I had difficulty or was 
 
 Pros:
 
+- Able to use version control tools as requested comfortably.
 - By and large able to understand all of the front end requirements, implement most if in a crude fashion, and take advantage of some of the built in components and features despite not having seen them before.
 - General understanding of the front end codebase outside of the methods and actions relating to linking to the back end.
 - Able to implement logger and parse backend index.js file appropriately
