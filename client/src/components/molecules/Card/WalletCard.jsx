@@ -5,6 +5,7 @@ import CardAddress from '../../atoms/Text/CardAddress';
 import CardBalance from '../../atoms/Text/CardBalance';
 import USDIcon from '../../atoms/Icons/USDIcon';
 import WalletsIcons from '../../atoms/Icons/WalletsIcon';
+import { usdFormatter, cryptoFormatter } from '../../../util/index';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -28,6 +29,8 @@ export default function WalletCard({ children, wallet, rate }) {
   const classes = useStyles();
   console.table(rate);
   const { name, address, currency, balance } = wallet;
+  const formattedBalance = cryptoFormatter(balance);
+  const formattedCashBalance = usdFormatter.format(balance / rate);
 
   return (
     <div className={classes.card}>
@@ -36,12 +39,12 @@ export default function WalletCard({ children, wallet, rate }) {
       <CardAddress>{address}</CardAddress>
       <p>Currency: {currency}</p>
       <CardBalance>
-        {balance} {currency === 'Ethereum' ? 'ETH' : 'BTC'}
+        {formattedBalance} {currency === 'Ethereum' ? 'ETH' : 'BTC'}
       </CardBalance>
       <div>
         <CardBalance>
           <USDIcon />
-          {balance / rate}
+          {formattedCashBalance}
         </CardBalance>
       </div>
       {/* <WalletsIcons /> */}
