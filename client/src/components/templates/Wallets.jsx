@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import PriceInfo from '../molecules/Info/PriceInfo';
@@ -19,8 +19,10 @@ export default function ({ wallets, rate }) {
     return <WalletCard key={i} wallet={wallet} rate={rate} />;
   });
 
+  const [wallet, toggleWallet] = useState(false);
+
   const handleClick = () => {
-    console.log('clocked');
+    toggleWallet(wallet ? false : true);
   };
 
   return (
@@ -31,7 +33,7 @@ export default function ({ wallets, rate }) {
           <ContainedButton onClick={handleClick}>
             Add New Wallet
           </ContainedButton>
-          <EditWallet />
+          {wallet ? <EditWallet /> : null}
           {WalletCards}
         </Grid>
       </Grid>

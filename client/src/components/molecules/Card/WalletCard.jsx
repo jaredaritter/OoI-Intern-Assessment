@@ -6,6 +6,7 @@ import CardBalance from '../../atoms/Text/CardBalance';
 import USDIcon from '../../atoms/Icons/USDIcon';
 // import WalletsIcons from '../../atoms/Icons/WalletsIcon';
 import { usdFormatter, cryptoFormatter } from '../../../util/index';
+import ContainedButton from '../../atoms/Button/Contained';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -31,6 +32,14 @@ export default function WalletCard({ children, wallet, rate }) {
   const formattedBalance = cryptoFormatter(balance);
   const formattedCashBalance = usdFormatter.format(balance / rate);
 
+  const handleEdit = (e) => {
+    console.log('Begin Editting');
+  };
+
+  const handleRemove = (e) => {
+    console.log('Begin Remove');
+  };
+
   return (
     <div className={classes.card}>
       {children}
@@ -47,6 +56,8 @@ export default function WalletCard({ children, wallet, rate }) {
         </CardBalance>
       </div>
       {/* <WalletsIcons /> */}
+      <ContainedButton onClick={handleEdit}>Edit Wallet</ContainedButton>
+      <ContainedButton onClick={handleRemove}>Remove Wallet</ContainedButton>
     </div>
   );
 }
