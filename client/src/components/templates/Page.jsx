@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { makeStyles, withStyles, useTheme } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Container from "@material-ui/core/Container";
+import React, { useState } from 'react';
+import { makeStyles, withStyles, useTheme } from '@material-ui/core/styles';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    height: "100%",
-    backgroundColor: "#f8f8f8",
-    flexFlow: "column",
-    display: "flex",
+    height: '100%',
+    backgroundColor: '#f8f8f8',
+    flexFlow: 'column',
+    display: 'flex',
   },
   padding: {
-    paddingTop: "2em",
+    paddingTop: '2em',
   },
   navigation: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
   },
   tabs: {
-    backgroundColor: "#2e1534",
+    backgroundColor: '#2e1534',
   },
 }));
 
@@ -33,9 +33,9 @@ function TabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
       style={{
-        backgroundColor: "#f8f8f8",
-        paddingBottom: "5em",
-        overflowY: "auto",
+        backgroundColor: '#f8f8f8',
+        paddingBottom: '5em',
+        overflowY: 'auto',
       }}
     >
       {activeTab === index && <Container maxWidth="md">{children}</Container>}
@@ -45,11 +45,11 @@ function TabPanel(props) {
 
 const StyledTabs = withStyles((theme) => ({
   indicator: {
-    display: "flex",
-    justifyContent: "center",
-    backgroundColor: "transparent",
-    "& > span": {
-      width: "100%",
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    '& > span': {
+      width: '100%',
       backgroundColor: theme.palette.primary.main,
     },
   },
@@ -57,8 +57,8 @@ const StyledTabs = withStyles((theme) => ({
 
 const StyledTab = withStyles((theme) => ({
   root: {
-    textTransform: "uppercase",
-    color: "#929292",
+    textTransform: 'uppercase',
+    color: '#929292',
     fontWeight: 700,
     fontSize: 12,
     letterSpacing: 1.2,
